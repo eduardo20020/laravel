@@ -11,6 +11,12 @@ class User extends Authenticatable
 {
     use HasFactory, Notifiable;
 
+       // Método para verificar si el usuario tiene un rol específico
+       public function hasRole($role)
+       {
+           return $this->role === $role;
+       }
+
     /**
      * The attributes that are mass assignable.
      *
@@ -20,6 +26,8 @@ class User extends Authenticatable
         'name',
         'email',
         'password',
+        'rol',
+
     ];
 
     /**

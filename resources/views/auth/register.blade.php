@@ -1,4 +1,5 @@
 <x-guest-layout>
+    <h3 class="text-center mx-auto text-lg">Registrate con nosotros!</h3>
     <form method="POST" action="{{ route('register') }}">
         @csrf
 
@@ -15,6 +16,15 @@
             <x-text-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
             <x-input-error :messages="$errors->get('email')" class="mt-2" />
         </div>
+                <!-- Rol Address -->
+                <div class="mt-4">
+                    <x-input-label for="rol" :value="__('Rol')" />
+                    <select id="rol" name="rol" class="block mt-1 w-full">
+                        <option value="pasante">Pasante</option>
+                        <option value="empresa">Empresa</option>
+                    </select>
+                </div>
+
 
         <!-- Password -->
         <div class="mt-4">
