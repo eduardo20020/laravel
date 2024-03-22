@@ -5,10 +5,10 @@
             <div class="flex">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}">
+                    <a href="{{ route('welcome') }}">
                         <x-application-logo class="block h-9 w-auto fill-current text-gray-800" />
                     </a>
-                    <x-nav-link class="mx-6 text-xl" :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                    <x-nav-link class="mx-6 text-xl" :href="route('welcome')" :active="request()->routeIs('dashboard')">
                         {{ __('Social-Server') }}
                     </x-nav-link>
                 
@@ -16,47 +16,19 @@
 
                 <!-- Navigation Links -->
                 <div class="hidden space-x-8 sm:-my-px sm:ms-10 sm:flex">
-                    <x-nav-link class="text-lg" :href="route('dashboard')" :active="request()->routeIs('dashboard')">
+                    <x-nav-link class="text-lg" :href="route('welcome')" :active="request()->routeIs('dashboard')">
                         {{ __('Home') }}
                     </x-nav-link>
-                    <x-nav-link class="text-lg"  >
+                    <x-nav-link class="text-lg" :href="route('nosotros')"  >
                         {{ __('Nosotros') }}
                     </x-nav-link>
-                    <x-nav-link class="text-lg"  >
+                    <x-nav-link class="text-lg" :href="route('historia')" >
                         {{ __('Historia') }}
                     </x-nav-link>
-                    <x-nav-link class="text-lg" >
+                    <x-nav-link class="text-lg" :href="route('acercade')">
                         {{ __('Acerca de') }}
                     </x-nav-link>
-                    @if (Route::has('login'))
-                            <nav class="-mx-3 flex flex-1 justify-end">
-                                
-                                @auth
-                                    <a
-                                        href="{{ url('/dashboard') }}"
-                                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
-                                    >
-                                        Dashboard
-                                    </a>
-                                @else
-                                    <a
-                                        href="{{ route('login') }}"
-                                        class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
-                                    >
-                                        Log in
-                                    </a>
-
-                                    @if (Route::has('register'))
-                                        <a
-                                            href="{{ route('register') }}"
-                                            class="rounded-md px-3 py-2 text-black ring-1 ring-transparent transition hover:text-black/70 focus:outline-none focus-visible:ring-[#FF2D20] dark:text-white dark:hover:text-white/80 dark:focus-visible:ring-white"
-                                        >
-                                            Register
-                                        </a>
-                                    @endif
-                                @endauth
-                            </nav>
-                        @endif
+                    
                 </div>
             </div>
 
@@ -76,8 +48,17 @@
     <!-- Responsive Navigation Menu -->
     <div :class="{'block': open, 'hidden': ! open}" class="hidden sm:hidden">
         <div class="pt-2 pb-3 space-y-1">
-            <x-responsive-nav-link :href="route('dashboard')" :active="request()->routeIs('dashboard')">
-                {{ __('Dashboard') }}
+            <x-responsive-nav-link :href="route('welcome')" >
+                {{ __('Home') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('nosotros')">
+                {{ __('Nosotros') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('historia')" >
+                {{ __('Historia') }}
+            </x-responsive-nav-link>
+            <x-responsive-nav-link :href="route('acercade')" >
+                {{ __('Acerca de ') }}
             </x-responsive-nav-link>
         </div>
 

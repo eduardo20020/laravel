@@ -9,6 +9,18 @@ Route::get('/', function () {
     return view('welcome');
 })->name('welcome');
 
+
+Route::view('/nosotros', 'nosotros')->name('nosotros');
+Route::view('/historia', 'historia')->name('historia');
+Route::view('/acercade', 'acercade')->name('acercade');
+
+
+
+
+
+
+
+
 Route::get('/dashboard', function () {
     return view('dashboard');
 })->middleware(['auth', 'verified'])->name('dashboard');
