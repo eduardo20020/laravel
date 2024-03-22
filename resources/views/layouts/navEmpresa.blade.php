@@ -16,10 +16,13 @@
                         {{ __('Inicio') }}
                     </x-nav-link>
                     <x-nav-link >
-                        {{ __('Ver tus postulaciones') }}
+                        {{ __('Crear oferta') }}
                     </x-nav-link>
                     <x-nav-link >
-                        {{ __('Recomedados') }}
+                        {{ __('Ver tus ofertas') }}
+                    </x-nav-link>
+                    <x-nav-link >
+                        {{ __('Ver tus postulaciones') }}
                     </x-nav-link>
                 </div>
             </div>

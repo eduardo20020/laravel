@@ -22,7 +22,11 @@ Route::view('/acercade', 'acercade')->name('acercade');
 
 
 Route::get('/dashboard', function () {
-    return view('dashboard');
+    if( Auth::user()->rol == 'pasante') {
+        return view('dashboard');
+    }if( Auth::user()->rol == 'empresa') {
+        return view('dashEmpresa');
+    }
 })->middleware(['auth', 'verified'])->name('dashboard');
 
 Route::get('/dashEmpresa', function () {
