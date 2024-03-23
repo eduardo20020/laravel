@@ -28,13 +28,13 @@
 
 
 
-                    <main class="">
+                    <main class="flex flex-col items-center justify-center px-5">
                         <div class="grid gap-6 lg:grid-cols-2 lg:gap-8">
                             <div class="container flex flex-col items-center justify-center ">
                                 <img src="{{ asset('img/carnaval.png') }}" class=" sm:w-64 md:w-96 lg:w-128 xl:w-160 2xl:w-192"/>
 
                             </div>
-                            <div class="flex flex-col items-center justify-center">
+                            <div class="flex flex-col items-center justify-center px-5">
                                 <h1 class="text-4xl font-bold text-center mb-3 px-5">Somos la mejor opcion</h1>
                                 <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Consequatur quasi reiciendis soluta, officiis deleniti dolore obcaecati possimus amet, rerum totam delectus voluptatum vitae ipsam. Quis perferendis tempora nulla fuga rerum?</p>
                                 <x-logins>

@@ -28,8 +28,8 @@
 
 
 
-                    <main class="">
-                        <div class="container flex flex-col items-center justify-center px-5">
+                    <main class="flex flex-col items-center justify-center px-5">
+                        <div class="flex flex-col items-center justify-center px-5">
                             @yield('main')
                         </div>
                     </main>
