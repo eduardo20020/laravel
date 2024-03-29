@@ -15,6 +15,7 @@ Route::view('/historia', 'historia')->name('historia');
 Route::view('/acercade', 'acercade')->name('acercade');
 
 
+Route::view('/crearOferta', 'crearOferta')->name('crearOferta');
 
 
 
